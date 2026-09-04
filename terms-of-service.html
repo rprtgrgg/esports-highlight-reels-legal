@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esports Highlight Reels Terms of Service</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root{
+    --bg:#f7f7fb;
+    --surface:#ffffff;
+    --text:#1c1b24;
+    --muted:#68667a;
+    --accent:#5b4fe0;
+    --accent-soft:#eeecfc;
+    --border:#e4e3ed;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111017;
+      --surface:#17151f;
+      --text:#edebf5;
+      --muted:#9c99ae;
+      --accent:#9a8fff;
+      --accent-soft:#241f3a;
+      --border:#2b2836;
+    }
+  }
+  *{ box-sizing:border-box; }
+  html, body{ margin:0; background:var(--bg); }
+  body{
+    color:var(--text);
+    font-family:"Public Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{ max-width:680px; margin:0 auto; padding:72px 24px 120px; }
+  .doc{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:4px;
+    padding:56px clamp(24px,6vw,64px) 64px;
+  }
+  header.doc-head{ margin-bottom:48px; padding-bottom:32px; border-bottom:1px solid var(--border); }
+  .eyebrow{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 14px;
+  }
+  h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-optical-sizing:auto; font-weight:500;
+    font-size:clamp(28px,4.2vw,36px); line-height:1.15;
+    letter-spacing:-0.01em; text-wrap:balance; margin:0 0 18px;
+  }
+  .meta{ display:flex; flex-wrap:wrap; gap:8px 24px; font-family:"IBM Plex Mono", monospace; font-size:13px; color:var(--muted); }
+  .meta span b{ color:var(--text); font-weight:500; }
+  .lede{ color:var(--muted); font-size:17px; margin:0 0 44px; }
+  section{ margin-bottom:38px; }
+  section:last-of-type{ margin-bottom:0; }
+  .clause-head{ display:flex; align-items:baseline; gap:12px; margin:0 0 14px; }
+  .clause-num{
+    font-family:"IBM Plex Mono", monospace; font-size:13px; font-weight:500;
+    color:var(--accent); background:var(--accent-soft); border-radius:3px; padding:2px 7px; flex:none;
+  }
+  h2{ font-family:"Fraunces", Georgia, serif; font-weight:500; font-size:19px; margin:0; letter-spacing:-0.005em; }
+  section p, section li{ margin:0 0 12px; color:var(--text); }
+  section p:last-child{ margin-bottom:0; }
+  ul{ margin:0 0 12px; padding-left:22px; }
+  li{ margin-bottom:6px; }
+  .platform-list{ display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 4px; padding:0; list-style:none; }
+  .platform-list li{
+    font-family:"IBM Plex Mono", monospace; font-size:12.5px;
+    border:1px solid var(--border); border-radius:20px; padding:5px 13px; color:var(--muted); margin:0;
+  }
+  .contact-box{ margin-top:44px; padding-top:28px; border-top:1px solid var(--border); font-size:14.5px; color:var(--muted); }
+  .contact-box a{ color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft); }
+  .contact-box a:hover{ border-bottom-color:var(--accent); }
+  .contact-box a:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="doc">
+    <header class="doc-head">
+      <p class="eyebrow">Esports Highlight Reels</p>
+      <h1>Terms of Service</h1>
+      <div class="meta">
+        <span>Effective <b>September 4, 2026</b></span>
+        <span>Operator <b>single individual</b></span>
+        <span>Users <b>operator only</b></span>
+      </div>
+    </header>
+
+    <p class="lede">
+      Esports Highlight Reels is a personal automation tool, not a public
+      product. It has exactly one user: the individual who operates it and
+      owns the connected accounts below. These terms describe what the tool
+      does and don't apply to anyone else.
+    </p>
+
+    <section>
+      <div class="clause-head"><span class="clause-num">1</span><h2>What this is</h2></div>
+      <p>
+        A self-hosted <a href="https://n8n.io" style="color:inherit;text-decoration:underline;">n8n</a>
+        workflow that reads publicly available esports tournament broadcasts
+        on YouTube, uses an AI model to identify highlight-worthy moments,
+        automatically reframes and trims a short vertical clip, and — only
+        after the operator manually approves that specific clip — republishes
+        it to the operator's own accounts on:
+      </p>
+      <ul class="platform-list">
+        <li>YouTube</li>
+        <li>Facebook</li>
+        <li>TikTok</li>
+        <li>Instagram</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="clause-head"><span class="clause-num">2</span><h2>Human approval, every time</h2></div>
+      <p>
+        No clip is ever published automatically. Each candidate is sent to
+        the operator as a message with the clip attached; publishing happens
+        only after an explicit approval on that message. Rejected or
+        unanswered clips are discarded and never posted.
+      </p>
+    </section>
+
+    <section>
+      <div class="clause-head"><span class="clause-num">3</span><h2>Source material</h2></div>
+      <p>
+        Source footage is drawn from official, publicly published tournament
+        broadcasts. The tool does not download or republish anyone's private
+        content, and does not scrape or interact with any TikTok user's
+        account other than the operator's own.
+      </p>
+    </section>
+
+    <section>
+      <div class="clause-head"><span class="clause-num">4</span><h2>No public accounts, no signup</h2></div>
+      <p>
+        This tool offers no registration, login, or account creation to
+        third parties, has no public-facing pages, and is not offered as a
+        service to anyone besides its operator.
+      </p>
+    </section>
+
+    <section>
+      <div class="clause-head"><span class="clause-num">5</span><h2>Changes</h2></div>
+      <p>
+        Because this is a single-operator tool rather than a public service,
+        these terms change only when the tool's own behavior changes, and the
+        "Effective" date above is updated accordingly.
+      </p>
+    </section>
+
+    <div class="contact-box">
+      Questions about this integration — including for TikTok's app review —
+      go to <a href="mailto:esportshighlightbot@gmail.com">esportshighlightbot@gmail.com</a>.
+    </div>
+  </div>
+</div>
+</body>
+</html>
